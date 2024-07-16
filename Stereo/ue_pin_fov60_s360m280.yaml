@@ -1,0 +1,392 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+File.version: "1.0" #???
+Camera.type: "KannalaBrandt8"
+#---fov100 fx、fy=640/4.8*2.0=266.666667。cx=640/2,cy=480/2
+#Camera1.fx: 266.666667
+#Camera1.fy: 266.666667
+#Camera1.cx: 320.0
+#Camera1.cy: 240.0
+#Camera1.k1: 0.33333333333333333
+#Camera1.k2: 0.13333333333
+#Camera1.k3: 0.05396825396
+#Camera1.k4: 0.02186948853
+#Camera2.fx: 266.666667
+#Camera2.fy: 266.666667
+#Camera2.cx: 320.0
+#Camera2.cy: 240.0
+#Camera2.k1: 0.33333333333333333
+#Camera2.k2: 0.13333333333
+#Camera2.k3: 0.05396825396
+#Camera2.k4: 0.02186948853
+#---fov60  fx、fy=640/4.8*4.15=553.3333333
+Camera1.fx: 553.3333333
+Camera1.fy: 553.3333333
+Camera1.cx: 320.0
+Camera1.cy: 240.0
+Camera1.k1: 0.33333333333333333
+Camera1.k2: 0.13333333333
+Camera1.k3: 0.05396825396
+Camera1.k4: 0.02186948853
+Camera2.fx: 553.3333333
+Camera2.fy: 553.3333333
+Camera2.cx: 320.0
+Camera2.cy: 240.0
+Camera2.k1: 0.33333333333333333
+Camera2.k2: 0.13333333333
+Camera2.k3: 0.05396825396
+Camera2.k4: 0.02186948853
+#---fov70  fx、fy=640/4.8*3.4=453.3333333
+# Camera1.fx: 453.3333333
+# Camera1.fy: 453.3333333
+# Camera1.cx: 320.0
+# Camera1.cy: 240.0
+# Camera1.k1: 0.33333333333333333
+# Camera1.k2: 0.13333333333
+# Camera1.k3: 0.05396825396
+# Camera1.k4: 0.02186948853
+# Camera2.fx: 453.3333333
+# Camera2.fy: 453.3333333
+# Camera2.cx: 320.0
+# Camera2.cy: 240.0
+# Camera2.k1: 0.33333333333333333
+# Camera2.k2: 0.13333333333
+# Camera2.k3: 0.05396825396
+# Camera2.k4: 0.02186948853
+#---fov90  fx、fy=640/4.8*2.40=320.0
+#Camera1.fx: 320.0
+#Camera1.fy: 320.0
+#Camera1.cx: 320.0
+#Camera1.cy: 240.0
+#Camera1.k1: 0.33333333333333333
+#Camera1.k2: 0.13333333333
+#Camera1.k3: 0.05396825396
+#Camera1.k4: 0.02186948853
+#Camera2.fx: 320.0
+#Camera2.fy: 320.0
+#Camera2.cx: 320.0
+#Camera2.cy: 240.0
+#Camera2.k1: 0.33333333333333333
+#Camera2.k2: 0.13333333333
+#Camera2.k3: 0.05396825396
+#Camera2.k4: 0.02186948853
+
+# Transformation matrix from right camera to left camera /media/hl/Stuff/ubuntu_share_2/Dataset/ue_180/calib/get_t.py
+Stereo.T_c1_c2: !!opencv-matrix
+  rows: 4
+  cols: 4
+  dt: f
+
+  # 0
+  data: [ 1.0,0.0, 0.0, 0.2,
+          0.0, 1.0, 0.0, 0.0,
+          0.0, 0.0, 1.0, 0.0,
+          0.0,0.0,0.0,1.0]
+tantheta: 0.0
+#Camera1.overlappingBegin: 0 # theta=5:128  theta=10:225
+#Camera1.overlappingEnd: 640
+#Camera2.overlappingBegin: 0
+#Camera2.overlappingEnd: 640 # theta=5:512  theta=10:415
+#ORBextractor.nFeatures: 1100 #fov100:1000 fov60:1100 fov80:1100
+
+  # 5
+#  data: [ 0.98480775, 0.0,  0.17364818,  0.19923894,
+#          0.0,  1.0,  0.0,  0.0,
+#          -0.17364818, 0.0,  0.98480775, -0.01743115,
+#          0.0,0.0,0.0,1.0]
+#tantheta: 0.08748866353
+#Camera1.overlappingBegin: 95 #fov100:95
+#Camera1.overlappingEnd: 640
+#Camera2.overlappingBegin: 0
+#Camera2.overlappingEnd: 545 #fov100:545
+#ORBextractor.nFeatures: 1600 #fov100:1600 fov60:1400
+
+    # 7.5
+    #  # 计算真实值
+    #  data: [ 0.96592583, 0.0,  0.25881905,  0.19828897,
+    #          0.0,  1.0,  0.0,  0.0,
+    #          -0.25881905, 0.0,  0.96592583, -0.02610524]
+
+    # 10  标定双目 逆矩阵 可用
+#  data: [ 0.93969262, 0.0,  0.34202014,  0.1969615506,
+#          0.0,  1.0,  0.0,  0.0,
+#          -0.34202014, 0.0,  0.93969262, -0.0347296,
+#          0.0,0.0,0.0,1.0]
+#tantheta: 0.17632698071
+#Camera1.overlappingBegin: 170 # fov100:theta=10:170  theta=20:276  fov60: theta=5:128  theta=10:225
+#Camera1.overlappingEnd: 640
+#Camera2.overlappingBegin: 0
+#Camera2.overlappingEnd: 470 # fov100:theta=10:470  theta=20:364   fov60: theta=5:512  theta=10:415
+#ORBextractor.nFeatures: 1100 #fov100=1800 fov60=1700
+
+  # 12.5
+  #  # 计算真实值
+  #  data: [ 0.90630779, 0.0,  0.42261826,  0.1952592,
+  #          0.0,  1.0,  0.0,  0.0,
+  #          -0.42261826, 0.0,  0.90630779, -0.04328792]
+
+# 15
+  # 计算真实值
+#  data: [ 0.8660254, 0.0,  0.5,  0.19318517,
+#          0.0,  1.0,  0.0,  0.0,
+#          -0.5, 0.0,  0.8660254, -0.05176381,
+#          0.0,0.0,0.0,1.0]
+#tantheta: 0.26794919243
+#Camera1.overlappingBegin: 225 # fov100:225  fov60:
+#Camera1.overlappingEnd: 640
+#Camera2.overlappingBegin: 0
+#Camera2.overlappingEnd: 415 # fov100:415   fov60:
+#ORBextractor.nFeatures: 2200 #fov100=1800 fov60=
+
+  # 17.5
+  #  # 计算真实值
+  #  data: [ 0.81915204, 0.0,  0.57357644,  0.19074339,
+  #          0.0,  1.0,  0.0,  0.0,
+  #          -0.57357644, 0.0,  0.81915204, -0.06014116]
+
+#  # 20  标定双目 逆矩阵 可用
+#  data: [ 0.76604444, 0.0,  0.64278761,  0.18794,
+#          0.0,  1.0,  0.0,  0.0,
+#          -0.64278761, 0.0,  0.76604444, -0.0684,
+#          0.0,0.0,0.0,1.0 ]
+#tantheta: 0.36397023427 # tan0=0; tan10=0.17632698071; tan20=0.36397023427;
+#Camera1.overlappingBegin: 276 # fov100:276  fov60: 420
+#Camera1.overlappingEnd: 640
+#Camera2.overlappingBegin: 0
+#Camera2.overlappingEnd: 364 # fov100:364   fov60: 220
+#ORBextractor.nFeatures: 2500 #fov100:2700 fov60:2500
+
+  # 22.5
+  #  # 计算真实值
+  #  data: [ 0.70710678, 0.0,  0.70710678,  0.18477591,
+  #          0.0,  1.0,  0.0,  0.0,
+  #          -0.70710678, 0.0,  0.70710678, -0.07653669]
+
+  # 25
+  # 计算真实值
+#  data: [ 0.64278761, 0.0,  0.76604444,  0.18126156,
+#          0.0,  1.0,  0.0,  0.0,
+#          -0.76604444, 0.0,  0.64278761, -0.08452365,
+#          0.0,0.0,0.0,1.0 ]
+#tantheta: 0.46630765815 # tan0=0; tan10=0.17632698071; tan20=0.36397023427;
+#Camera1.overlappingBegin: 315 # fov100:315  fov60:
+#Camera1.overlappingEnd: 640
+#Camera2.overlappingBegin: 0
+#Camera2.overlappingEnd: 325 # fov100:325   fov60:
+#ORBextractor.nFeatures: 2500 #fov100: fov60:
+
+  # 27.5
+  #  # 计算真实值
+  #  data: [ 0.57357644, 0.0,  0.81915204,  0.17740217,
+  #          0.0,  1.0,  0.0,  0.0,
+  #          -0.81915204, 0.0,  0.57357644, -0.09234972]
+
+  #  # 30  标定双目 逆矩阵
+  #  data: [ 5.00969280e-01, -1.54670197e-03,  8.65463684e-01,  1.89477633e-01,
+  #          1.31448056e-05,  9.99998417e-01,  1.77952513e-03,  9.79052081e-04,
+  #          -8.65465066e-01, -8.80111073e-04,  5.00968507e-01, -7.26362658e-02 ]
+  #  # 计算真实值
+  #  data: [ 0.5, 0.0,  0.8660254,  0.1732,
+  #          0.0,  1.0,  0.0,  0.0,
+  #          -0.8660254, 0.0,  0.5, -0.1 ]
+  #  30 b=40
+  #  data: [ 0.5, 0.0,  0.8660254,  0.3464,
+  #          0.0,  1.0,  0.0,  0.0,
+  #          -0.8660254, 0.0,  0.5, -0.2 ]
+  #  30 b=60
+  #  data: [ 0.5, 0.0,  0.8660254,  0.5196,
+  #          0.0,  1.0,  0.0,  0.0,
+  #          -0.8660254, 0.0,  0.5, -0.3 ]
+
+  # 32.5
+  #  # 计算真实值
+  #  data: [ 0.42261826, 0.0,  0.90630779,  0.16867829,
+  #          0.0,  1.0,  0.0,  0.0,
+  #          -0.90630779, 0.0,  0.42261826, -0.10745992]
+
+  # 35
+  #  # 计算真实值
+  #  data: [ 0.34202014, 0.0,  0.93969262,  0.16383041,
+  #          0.0,  1.0,  0.0,  0.0,
+  #          -0.93969262, 0.0,  0.34202014, -0.11471529]
+
+  # 40  标定双目 逆矩阵 可用
+  #  data: [ 1.75081543e-01, -1.84598774e-03,  9.84552206e-01,  1.80984402e-01,
+  #          4.78255417e-05,  9.99998257e-01,  1.86644359e-03,  8.05397351e-04,
+  #          -9.84553935e-01, -2.79693082e-04,  1.75081326e-01, -9.50821838e-02]
+  #  # 计算真实值
+  #  data: [ 0.17364818, 0.0,  0.98480775,  0.1532,
+  #          0.0,  1.0,  0.0,  0.0,
+  #          -0.98480775, 0.0,  0.17364818, -0.1286 ]
+  # by 1.2
+  #  data: [ 0.17364818, 0.0,  0.98480775,  0.18384,
+  #          0.0,  1.0,  0.0,  0.0,
+  #          -0.98480775, 0.0,  0.17364818, -0.15432 ]
+
+  # 50
+  #  # 计算真实值
+  #  data: [ -0.17364818, 0.0,  0.98480775,  0.1286,
+  #          0.0,  1.0,  0.0,  0.0,
+  #          -0.98480775, 0.0,  -0.17364818, -0.1532 ]
+
+  # 60
+  # # 标定
+  #  data: [ -5.08303790e-01, -8.56455787e-04,  8.61177405e-01,  1.43893191e-01,
+  #          -5.76039517e-04,  9.99999620e-01,  6.54513678e-04,  2.36400729e-03,
+  #          -8.61177638e-01, -1.63380433e-04, -5.08304090e-01, -1.46467979e-01]
+  #  # 计算真实值
+  #  data: [ -0.5, 0.0,  0.8660254,  0.1,
+  #          0.0,  1.0,  0.0,  0.0,
+  #          -0.8660254, 0.0,  -0.5, -0.1732 ]
+
+
+  # 70
+# 计算真实值
+#  data: [ -0.76604444, 0.0,  0.64278761,  0.06840403,
+#          0.0,  1.0,  0.0,  0.0,
+#          -0.64278761, 0.0,  -0.76604444, -0.1879385 ]
+
+# 80
+#  # 计算真实值
+#  data: [ -0.93969262, 0.0,  0.34202014,  0.03473,
+#          0.0,  1.0,  0.0,  0.0,
+#          -0.34202014, 0.0,  -0.93969262, -0.19696 ]
+
+# Lapping area between images (We must calculate) TODO 重叠区域计算，https://github.com/UZ-SLAMLab/ORB_SLAM3/issues/88
+#fov100
+#第一个实验：平行双目图像，更改单双目视野
+#Camera1.overlappingBegin: 0 #120 220 170
+#Camera1.overlappingEnd: 640
+#Camera2.overlappingBegin: 0
+#Camera2.overlappingEnd: 640 #520 420 470
+#第二个实验：发散双目
+#放在每一组外参下面
+
+# Camera resolution
+#Camera.width: 1920
+#Camera.height: 1080
+Camera.width: 640
+Camera.height: 480
+
+ORBextractor.nFeatures: 2000 #2000
+
+# s640
+#Camera1.overlappingBegin: 0 # theta=5:128  theta=10:225
+#Camera1.overlappingEnd: 640
+#Camera2.overlappingBegin: 0
+#Camera2.overlappingEnd: 640 # theta=5:512  theta=10:415
+# s600 m20+20
+#Camera1.overlappingBegin: 20 # theta=5:128  theta=10:225
+#Camera1.overlappingEnd: 620
+#Camera2.overlappingBegin: 20
+#Camera2.overlappingEnd: 620 # theta=5:512  theta=10:415
+# s560 m40+40
+#Camera1.overlappingBegin: 40 # theta=5:128  theta=10:225
+#Camera1.overlappingEnd: 600
+#Camera2.overlappingBegin: 40
+#Camera2.overlappingEnd: 600 # theta=5:512  theta=10:415
+# s520 m60+60
+#Camera1.overlappingBegin: 60 # theta=5:128  theta=10:225
+#Camera1.overlappingEnd: 580
+#Camera2.overlappingBegin: 60
+#Camera2.overlappingEnd: 580 # theta=5:512  theta=10:415
+# s480 m80+80
+#Camera1.overlappingBegin: 80 # theta=5:128  theta=10:225
+#Camera1.overlappingEnd: 560
+#Camera2.overlappingBegin: 80
+#Camera2.overlappingEnd: 560 # theta=5:512  theta=10:415
+# s440 m100+100
+#Camera1.overlappingBegin: 100 # theta=5:128  theta=10:225
+#Camera1.overlappingEnd: 540
+#Camera2.overlappingBegin: 10
+#Camera2.overlappingEnd: 540 # theta=5:512  theta=10:415
+# s400 m120+120
+#Camera1.overlappingBegin: 120 # theta=5:128  theta=10:225
+#Camera1.overlappingEnd: 520
+#Camera2.overlappingBegin: 120
+#Camera2.overlappingEnd: 520 # theta=5:512  theta=10:415
+# s360 m140+140
+Camera1.overlappingBegin: 140 # theta=5:128  theta=10:225
+Camera1.overlappingEnd: 500
+Camera2.overlappingBegin: 140
+Camera2.overlappingEnd: 500 # theta=5:512  theta=10:415
+# s320 m160+160
+#Camera1.overlappingBegin: 160 # theta=5:128  theta=10:225
+#Camera1.overlappingEnd: 480
+#Camera2.overlappingBegin: 160
+#Camera2.overlappingEnd: 480 # theta=5:512  theta=10:415
+# s280 m180+180
+#Camera1.overlappingBegin: 180 # theta=5:128  theta=10:225
+#Camera1.overlappingEnd: 460
+#Camera2.overlappingBegin: 180
+#Camera2.overlappingEnd: 460 # theta=5:512  theta=10:415
+# s240 m200+200
+#Camera1.overlappingBegin: 200 # theta=5:128  theta=10:225
+#Camera1.overlappingEnd: 440
+#Camera2.overlappingBegin: 200
+#Camera2.overlappingEnd: 440 # theta=5:512  theta=10:415
+# s200 m220+220
+#Camera1.overlappingBegin: 220 # theta=5:128  theta=10:225
+#Camera1.overlappingEnd: 420
+#Camera2.overlappingBegin: 220
+#Camera2.overlappingEnd: 420 # theta=5:512  theta=10:415
+
+# Camera frames per second
+Camera.fps: 30
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+# Image scale, it changes the image size to be processed (<1.0: reduce, >1.0: increase)
+#Camera.imageScale: 0.7071 # 1/sqrt(2)
+
+# Close/Far threshold. Baseline times.  #用于区分哪些特征点是近点，哪些是远点
+Stereo.ThDepth: 40.0 #  40 深度阈值，不是一个精确的数值，大概预估的，可以不改动，要改的话参考下述公式:
+  #自己粗略估计一个相机可以良好显示的最大距离值为s = 10  如果fx = 100 Camera.bf = 20
+  #那么 ThDepth = s*fx/Camera.bf = 10 *100 /20 = 50
+  #将你自己的参数带入上述公式 可以得到大概的阈值。
+#双目关键点的深度如果小于ThDepth倍基线长度的值，就被叫做近关键点，否则就是远关键点。近关键点可以较好的被三角化，并提供尺度，平移，旋转信息。而远关键点可以提供比较好的旋转信息，但只能有比较差的尺度和平移信息，远点用多视角进行三角化。https://blog.csdn.net/catpico/article/details/120688795
+
+# 基线距离（单位：米） * fx（单位：像素） 0.2*338
+Camera.bf: 53.3333 #840*0.2 570*0.2 136.8
+#Camera.bf: 110.7 #840*0.2 570*0.2 136.8
+
+thFarPoints: 10.0
+
+loopClosing: 0
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+#ORBextractor.nFeatures: 1800 # Tested with 1250   老数据集1400 新数据集1000
+
+# ORB Extractor: Scale factor between levels in the scale pyramid
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid
+ORBextractor.nLevels: 8 #8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast
+ORBextractor.iniThFAST: 20 # 20  15 初始阶段的FAST特征点提取的阈值。（增大该值可能会导致更少的特征点被提取，而减小该值可能会导致更多的特征点被提取。）
+ORBextractor.minThFAST: 7 # 7 用于跟踪阶段的FAST特征点提取的阈值
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1.0
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2.0
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -3.5
+Viewer.ViewpointF: 500.0
